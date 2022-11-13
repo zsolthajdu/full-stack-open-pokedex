@@ -1,14 +1,11 @@
-# fly.toml file generated for pokedex-test on 2022-11-08T22:41:52-08:00
+# fly.toml file generated for zsolt on 2022-11-11T10:29:47-08:00
 
-app = "pokedex-test"
+app = "zsolt"
 kill_signal = "SIGINT"
 kill_timeout = 5
 
 [deploy]
   release_command = "npm run build"
-
-[processes]
-  app = "node app.js"
 
 [env]
   PORT = "8080"
@@ -16,6 +13,9 @@ kill_timeout = 5
 [experimental]
   allowed_public_ports = []
   auto_rollback = true
+
+[processes]
+  app = "node app.js"
 
 [[services]]
   http_checks = []
